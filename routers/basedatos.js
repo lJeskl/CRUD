@@ -30,7 +30,7 @@ router.post('/insertarpacientes', async (req, res) => {
 router.post('/actualizapacientes', async (req, res) => {
   const { id, nombre, apellido, numid } = req.body;
   await pool.query(
-    `UPDATE pacientes SET nombre='${nombre}', apellido='${apellido}', numid='${numid}' WHERE id='${id}'`
+    `UPDATE pacientes SET nombre='${nombre}', apellido='${apellido}', numid='${numid}' WHERE id=${id}`
   );
   res.send('ACTUALIZADO');
 });
