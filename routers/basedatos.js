@@ -2,10 +2,10 @@ const { Pool } = require('pg');
 const Router = require('express-promise-router');
 
 const pool = new Pool({
-  user: 'fredyb',
+  user: 'postgres',
   host: 'localhost',
   database: 'postgres',
-  password: 'univalle',
+  password: '',
   port: 5432,
 });
 
